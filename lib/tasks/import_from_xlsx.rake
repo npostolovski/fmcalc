@@ -1,10 +1,11 @@
 namespace :utils do
-  IMPORT_DIR = "tmp/import"
+  IMPORT_DIR = File.expand_path("tmp/import")
 
   desc "Import the squad for a new club from an XLSX file"
   task :import_from_xlsx => :environment do |task|
-    Dir.foreach(IMPORT_DIR) do |fname|
-      Import.club(fname)
+    club_files = Dir.entries(IMPORT_DIR) - %w[. ..]
+    club_files.each do |fname|
+      Import.new(fname).club
     end
   end
 end
