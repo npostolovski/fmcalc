@@ -578,3 +578,284 @@ Role.create(
   primary_attributes: ball_winning_midfielder_defend_primary_attributes,
   secondary_attributes: ball_winning_midfielder_defend_secondary_attributes
 )
+
+anchor_man_primary_attributes = [
+  :tackling,
+  :aggression,
+  :anticipation,
+  :bravery,
+  :composure,
+  :concentration,
+  :decisions,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :stamina
+]
+
+anchor_man_secondary_attributes = [
+  :heading,
+  :marking,
+  :passing,
+  :determination,
+  :acceleration,
+  :strength
+]
+
+Role.create(
+  name: "Anchor Man",
+  duty: "defend",
+  primary_attributes: anchor_man_primary_attributes,
+  secondary_attributes: anchor_man_secondary_attributes
+)
+
+half_back_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :anticipation,
+  :composure,
+  :decisions,
+  :positioning,
+  :teamwork
+]
+
+half_back_secondary_attributes = [
+  :heading,
+  :marking,
+  :tackling,
+  :concentration,
+  :determination,
+  :vision,
+  :balance,
+  :strength
+]
+
+Role.create(
+  name: "Half Back",
+  duty: "defend",
+  primary_attributes: half_back_primary_attributes,
+  secondary_attributes: half_back_secondary_attributes
+)
+
+regista_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :off_the_ball,
+  :vision
+]
+
+regista_secondary_attributes = [
+  :heading,
+  :marking,
+  :tackling,
+  :aggression,
+  :anticipation,
+  :concentration,
+  :determination,
+  :positioning,
+  :teamwork,
+  :balance,
+  :strength
+]
+
+Role.create(
+  name: "Regista",
+  duty: "support",
+  primary_attributes: regista_primary_attributes,
+  secondary_attributes: regista_secondary_attributes
+)
+
+roaming_playmaker_primary_attributes = [
+  :dribbling,
+  :first_touch,
+  :passing,
+  :technique,
+  :anticipation,
+  :composure,
+  :decisions,
+  :determination,
+  :off_the_ball,
+  :vision,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+roaming_playmaker_secondary_attributes = [
+  :finishing,
+  :long_shots,
+  :aggression,
+  :concentration,
+  :positioning,
+  :teamwork,
+  :agility,
+  :balance,
+  :natural_fitness,
+  :pace,
+  :strength
+]
+
+Role.create(
+  name: "Roaming Playmaker",
+  duty: "support",
+  primary_attributes: roaming_playmaker_primary_attributes,
+  secondary_attributes: roaming_playmaker_secondary_attributes
+)
+
+central_midfielder_defend_primary_attributes = [
+  :dribbling,
+  :passing,
+  :tackling,
+  :technique,
+  :anticipation,
+  :composure,
+  :concentration,
+  :off_the_ball,
+  :teamwork,
+  :vision,
+  :acceleration
+]
+
+central_midfielder_defend_secondary_attributes = [
+  :finishing,
+  :first_touch,
+  :heading,
+  :long_shots,
+  :marking,
+  :decisions,
+  :determination,
+  :positioning,
+  :workrate,
+  :agility,
+  :balance,
+  :natural_fitness,
+  :pace,
+  :stamina,
+  :strength
+]
+
+Role.create(
+  name: "Central Midfielder",
+  duty: "defend",
+  primary_attributes: central_midfielder_defend_primary_attributes,
+  secondary_attributes: central_midfielder_defend_secondary_attributes
+)
+
+central_midfielder_support_primary_attributes = [
+  :first_touch,
+  :passing,
+  :decisions,
+  :teamwork
+]
+
+central_midfielder_support_secondary_attributes = [
+  :heading,
+  :marking,
+  :tackling,
+  :concentration,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :workrate,
+  :stamina
+]
+
+Role.create(
+  name: "Central Midfielder",
+  duty: "support",
+  primary_attributes: central_midfielder_support_primary_attributes,
+  secondary_attributes: central_midfielder_support_secondary_attributes
+)
+
+central_midfielder_attack_primary_attributes = [
+  :first_touch,
+  :passing,
+  :decisions,
+  :off_the_ball
+]
+
+central_midfielder_attack_secondary_attributes = [
+  :finishing,
+  :long_shots,
+  :marking,
+  :tackling,
+  :concentration,
+  :determination,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+Role.create(
+  name: "Central Midfielder",
+  duty: "attack",
+  primary_attributes: central_midfielder_attack_primary_attributes,
+  secondary_attributes: central_midfielder_attack_secondary_attributes
+)
+
+central_midfielder_automatic_primary_attributes = [
+  :first_touch,
+  :passing,
+  :decisions,
+  :teamwork
+]
+
+central_midfielder_automatic_secondary_attributes = [
+  :finishing,
+  :long_shots,
+  :marking,
+  :tackling,
+  :concentration,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+Role.create(
+  name: "Central Midfielder",
+  duty: "automatic",
+  primary_attributes: central_midfielder_automatic_primary_attributes,
+  secondary_attributes: central_midfielder_automatic_secondary_attributes
+)
+
+box_to_box_midfielder_primary_attributes = [
+  :passing,
+  :tackling,
+  :decisions,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :acceleration,
+  :natural_fitness,
+  :stamina
+]
+
+box_to_box_midfielder_secondary_attributes = [
+  :finishing,
+  :first_touch,
+  :long_shots,
+  :marking,
+  :anticipation,
+  :bravery,
+  :composure,
+  :concentration,
+  :balance
+]
+
+Role.create(
+  name: "Box To Box Midfielder",
+  duty: "support",
+  primary_attributes: box_to_box_midfielder_primary_attributes,
+  secondary_attributes: box_to_box_midfielder_secondary_attributes
+)
