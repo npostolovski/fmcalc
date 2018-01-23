@@ -1,4 +1,5 @@
 require 'roo'
+# require 'pry'
 require_relative '../models/club.rb'
 
 class Import
@@ -15,8 +16,17 @@ class Import
 
     xlsx.each_row_streaming(offset: 2) do |row|
       name = row[0].to_s.split
+      player_abilities = Abilities.new
 
-      Player.create(first_name: name[0], last_name: name[1])
+      player_abilities.acceleration = row[2].value.to_i
+      player_abilities.vision = row[45].value.to_i
+      player_abilities.save
+
+      Player.create(
+        first_name: name[0],
+        last_name: name[1],
+        abilities: player_abilities
+      )
     end
 
     Club.create(name: club_name)
