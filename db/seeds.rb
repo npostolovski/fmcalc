@@ -238,3 +238,343 @@ Role.create(
   primary_attributes: ball_playing_defender_defend_primary_attributes,
   secondary_attributes: ball_playing_defender_defend_secondary_attributes
 )
+
+ball_playing_defender_stopper_primary_attributes = [
+  :heading,
+  :passing,
+  :tackling,
+  :aggression,
+  :bravery,
+  :decisions,
+  :determination,
+  :jumping_reach
+]
+
+ball_playing_defender_stopper_secondary_attributes = [
+  :first_touch,
+  :marking,
+  :technique,
+  :anticipation,
+  :composure,
+  :concentration,
+  :positioning,
+  :vision,
+  :strength
+]
+
+Role.create(
+  name: "Ball Playing Defender",
+  duty: "stopper",
+  primary_attributes: ball_playing_defender_stopper_primary_attributes,
+  secondary_attributes: ball_playing_defender_stopper_secondary_attributes
+)
+
+ball_playing_defender_cover_primary_attributes = [
+  :heading,
+  :passing,
+  :tackling,
+  :aggression,
+  :anticipation,
+  :decisions,
+  :positioning,
+  :acceleration,
+  :jumping_reach
+]
+
+ball_playing_defender_cover_secondary_attributes = [
+  :first_touch,
+  :marking,
+  :technique,
+  :bravery,
+  :composure,
+  :determination,
+  :vision,
+  :strength
+]
+
+Role.create(
+  name: "Ball Playing Defender",
+  duty: "cover",
+  primary_attributes: ball_playing_defender_cover_primary_attributes,
+  secondary_attributes: ball_playing_defender_cover_secondary_attributes
+)
+
+defensive_center_back_defend_primary_attributes = [
+  :heading,
+  :tackling,
+  :jumping_reach
+]
+
+defensive_center_back_defend_secondary_attributes = [
+  :marking,
+  :determination,
+  :positioning,
+  :strength
+]
+
+Role.create(
+  name: "Defensive Center Back",
+  duty: "defend",
+  primary_attributes: defensive_center_back_defend_primary_attributes,
+  secondary_attributes: defensive_center_back_defend_secondary_attributes
+)
+
+Role.create(
+  name: "Defensive Center Back",
+  duty: "stopper",
+  primary_attributes: defensive_center_back_defend_primary_attributes,
+  secondary_attributes: defensive_center_back_defend_secondary_attributes
+)
+
+Role.create(
+  name: "Defensive Center Back",
+  duty: "cover",
+  primary_attributes: defensive_center_back_defend_primary_attributes,
+  secondary_attributes: defensive_center_back_defend_secondary_attributes
+)
+
+sweeper_primary_attributes = [
+  :heading,
+  :marking,
+  :tackling,
+  :anticipation,
+  :concentration,
+  :decisions,
+  :positioning,
+  :acceleration,
+  :balance,
+  :jumping_reach
+]
+
+sweeper_secondary_attributes = [
+  :bravery,
+  :composure,
+  :determination,
+  :agility,
+  :strength
+]
+
+Role.create(
+  name: "Sweeper",
+  duty: "defend",
+  primary_attributes: sweeper_primary_attributes,
+  secondary_attributes: sweeper_secondary_attributes
+)
+
+libero_support_primary_attributes = [
+  :heading,
+  :marking,
+  :passing,
+  :tackling,
+  :anticipation,
+  :composure,
+  :concentration,
+  :decisions,
+  :positioning,
+  :teamwork,
+  :acceleration,
+  :balance,
+  :jumping_reach
+]
+
+libero_support_secondary_attributes = [
+  :dribbling,
+  :bravery,
+  :determination,
+  :vision,
+  :agility,
+  :strength
+]
+
+Role.create(
+  name: "Libero",
+  duty: "support",
+  primary_attributes: libero_support_primary_attributes,
+  secondary_attributes: libero_support_secondary_attributes
+)
+
+libero_attack_primary_attributes = [
+  :tackling,
+  :concentration,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :stamina
+]
+
+libero_attack_secondary_attributes = [
+  :marking,
+  :passing,
+  :aggression,
+  :composure,
+  :decisions,
+  :determination,
+  :acceleration
+]
+
+Role.create(
+  name: "Libero",
+  duty: "attack",
+  primary_attributes: libero_attack_primary_attributes,
+  secondary_attributes: libero_attack_secondary_attributes
+)
+
+defensive_midfielder_defend_primary_attributes = [
+  :tackling,
+  :concentration,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :stamina
+]
+
+defensive_midfielder_defend_secondary_attributes = [
+  :marking,
+  :passing,
+  :aggression,
+  :composure,
+  :decisions,
+  :determination,
+  :acceleration,
+  :strength
+]
+
+Role.create(
+  name: "Defensive Midfielder",
+  duty: "defend",
+  primary_attributes: defensive_midfielder_defend_primary_attributes,
+  secondary_attributes: defensive_midfielder_defend_secondary_attributes
+)
+
+defensive_midfielder_support_primary_attributes = [
+  :tackling,
+  :concentration,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :stamina
+]
+
+defensive_midfielder_support_secondary_attributes = [
+  :marking,
+  :passing,
+  :aggression,
+  :composure,
+  :decisions,
+  :determination,
+  :acceleration
+]
+
+Role.create(
+  name: "Defensive Midfielder",
+  duty: "support",
+  primary_attributes: defensive_midfielder_defend_primary_attributes,
+  secondary_attributes: defensive_midfielder_defend_secondary_attributes
+)
+
+deep_lying_playmaker_defend_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :vision
+]
+
+deep_lying_playmaker_defend_secondary_attributes = [
+  :long_shots,
+  :off_the_ball,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :balance
+]
+
+Role.create(
+  name: "Deep Lying Playmaker",
+  duty: "defend",
+  primary_attributes: deep_lying_playmaker_defend_primary_attributes,
+  secondary_attributes: deep_lying_playmaker_defend_secondary_attributes
+)
+
+deep_lying_playmaker_support_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :vision
+]
+
+deep_lying_playmaker_support_secondary_attributes = [
+  :long_shots,
+  :off_the_ball,
+  :positioning,
+  :teamwork,
+  :workrate,
+  :balance
+]
+
+Role.create(
+  name: "Deep Lying Playmaker",
+  duty: "support",
+  primary_attributes: deep_lying_playmaker_support_primary_attributes,
+  secondary_attributes: deep_lying_playmaker_support_secondary_attributes
+)
+
+ball_winning_midfielder_defend_primary_attributes = [
+  :first_touch,
+  :passing,
+  :tackling,
+  :technique,
+  :aggression,
+  :bravery,
+  :composure,
+  :decisions,
+  :determination,
+  :teamwork,
+  :vision,
+  :workrate,
+  :stamina,
+  :strength
+]
+
+ball_winning_midfielder_defend_secondary_attributes = [
+  :long_shots,
+  :marking,
+  :off_the_ball,
+  :positioning,
+  :acceleration,
+  :balance
+]
+
+Role.create(
+  name: "Ball Winning Midfielder",
+  duty: "defend",
+  primary_attributes: ball_winning_midfielder_defend_primary_attributes,
+  secondary_attributes: ball_winning_midfielder_defend_secondary_attributes
+)
+
+ball_winning_midfielder_support_primary_attributes = [
+  :tackling,
+  :aggression,
+  :bravery,
+  :determination,
+  :teamwork,
+  :workrate,
+  :stamina,
+  :strength
+]
+
+ball_winning_midfielder_support_secondary_attributes = [
+  :marking,
+  :positioning,
+  :acceleration
+]
+
+Role.create(
+  name: "Ball Winning Midfielder",
+  duty: "support",
+  primary_attributes: ball_winning_midfielder_defend_primary_attributes,
+  secondary_attributes: ball_winning_midfielder_defend_secondary_attributes
+)
