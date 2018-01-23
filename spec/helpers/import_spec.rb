@@ -18,4 +18,14 @@ describe Import do
 
     expect(Player.all.count).to eq expected_number_of_players
   end
+
+  it "creates players with the expected first and last name" do
+    expected_first_name = "Colby"
+    expected_last_name = "Bishop"
+
+    import.club
+
+    expect(Player.first.first_name).to eq expected_first_name
+    expect(Player.first.last_name).to eq expected_last_name
+  end
 end
