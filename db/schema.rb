@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123111245) do
+ActiveRecord::Schema.define(version: 20180124231617) do
 
   create_table "abilities", force: :cascade do |t|
     t.integer "player_id"
@@ -83,6 +83,19 @@ ActiveRecord::Schema.define(version: 20180123111245) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "duty"
+  end
+
+  create_table "suitability_scores", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "role_id"
+    t.integer "primary_score"
+    t.integer "secondary_score"
+    t.integer "total_score"
+    t.integer "average_primary"
+    t.integer "average_secondary"
+    t.integer "total_average"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
