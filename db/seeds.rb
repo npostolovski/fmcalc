@@ -1500,3 +1500,460 @@ Role.create(
   primary_attributes: inverted_wingback_defend_primary_attributes,
   secondary_attributes: inverted_wingback_defend_secondary_attributes
 )
+
+inverted_wingback_support_primary_attributes = [
+  :marking,
+  :passing,
+  :tackling,
+  :anticipation,
+  :decisions,
+  :determination,
+  :positioning,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+inverted_wingback_support_secondary_attributes = [
+  :dribbling,
+  :concentration,
+  :off_the_ball,
+  :vision,
+  :pace
+]
+
+Role.create(
+  name: "Inverted Wing-back",
+  duty: "support",
+  primary_attributes: inverted_wingback_support_primary_attributes,
+  secondary_attributes: inverted_wingback_support_secondary_attributes
+)
+
+inverted_wingback_attack_primary_attributes = [
+  :dribbling,
+  :marking,
+  :passing,
+  :tackling,
+  :anticipation,
+  :decisions,
+  :determination,
+  :positioning,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+inverted_wingback_attack_secondary_attributes = [
+  :long_shots,
+  :concentration,
+  :off_the_ball,
+  :pace
+]
+
+Role.create(
+  name: "Inverted Wing-back",
+  duty: "attack",
+  primary_attributes: inverted_wingback_attack_primary_attributes,
+  secondary_attributes: inverted_wingback_attack_secondary_attributes
+)
+
+Role.create(
+  name: "Inverted Wing-back",
+  duty: "automatic",
+  primary_attributes: inverted_wingback_attack_primary_attributes,
+  secondary_attributes: inverted_wingback_attack_secondary_attributes
+)
+
+segundo_volante_support_primary_attributes = [
+  :marking,
+  :passing,
+  :tackling,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :workrate,
+  :acceleration,
+  :natural_fitness,
+  :stamina,
+  :strength
+]
+
+segundo_volante_support_secondary_attributes = [
+  :finishing,
+  :first_touch,
+  :long_shots,
+  :anticipation,
+  :bravery,
+  :composure,
+  :concentration,
+  :decisions,
+  :balance
+]
+
+Role.create(
+  name: "Segundo Volante",
+  duty: "support",
+  primary_attributes: segundo_volante_support_primary_attributes,
+  secondary_attributes: segundo_volante_support_secondary_attributes
+)
+
+segundo_volante_attack_primary_attributes = [
+  :finishing,
+  :long_shots,
+  :marking,
+  :passing,
+  :tackling,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :workrate,
+  :acceleration,
+  :natural_fitness,
+  :stamina,
+  :strength
+]
+
+segundo_volante_attack_secondary_attributes = [
+  :first_touch,
+  :anticipation,
+  :bravery,
+  :composure,
+  :concentration,
+  :decisions,
+  :balance
+]
+
+Role.create(
+  name: "Segundo Volante",
+  duty: "attack",
+  primary_attributes: segundo_volante_attack_primary_attributes,
+  secondary_attributes: segundo_volante_attack_secondary_attributes
+)
+
+wide_midfielder_defend_primary_attributes = [
+  :marking,
+  :passing,
+  :tackling,
+  :off_the_ball,
+  :positioning,
+  :teamwork,
+  :workrate
+]
+
+wide_midfielder_defend_secondary_attributes = [
+  :crossing,
+  :dribbling,
+  :anticipation,
+  :concentration,
+  :decisions,
+  :determination,
+  :acceleration,
+  :stamina
+]
+
+Role.create(
+  name: "Wide Midfielder",
+  duty: "defend",
+  primary_attributes: wide_midfielder_defend_primary_attributes,
+  secondary_attributes: wide_midfielder_defend_secondary_attributes
+)
+
+wide_midfielder_support_primary_attributes = [
+  :passing,
+  :teamwork,
+  :workrate
+]
+
+wide_midfielder_support_secondary_attributes = [
+  :crossing,
+  :first_touch,
+  :tackling,
+  :anticipation,
+  :decisions,
+  :determination,
+  :positioning,
+  :vision,
+  :stamina
+]
+
+Role.create(
+  name: "Wide Midfielder",
+  duty: "support",
+  primary_attributes: wide_midfielder_support_primary_attributes,
+  secondary_attributes: wide_midfielder_support_secondary_attributes
+)
+
+wide_midfielder_attack_primary_attributes = [
+  :crossing,
+  :first_touch,
+  :passing,
+  :teamwork,
+  :workrate
+]
+
+wide_midfielder_attack_secondary_attributes = [
+  :tackling,
+  :anticipation,
+  :decisions,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :vision,
+  :stamina
+]
+
+Role.create(
+  name: "Wide Midfielder",
+  duty: "attack",
+  primary_attributes: wide_midfielder_attack_primary_attributes,
+  secondary_attributes: wide_midfielder_attack_secondary_attributes
+)
+
+wide_midfielder_automatic_primary_attributes = [
+  :passing,
+  :teamwork,
+  :workrate
+]
+
+wide_midfielder_automatic_secondary_attributes = [
+  :crossing,
+  :first_touch,
+  :tackling,
+  :anticipation,
+  :decisions,
+  :determination,
+  :off_the_ball,
+  :positioning,
+  :vision,
+  :stamina
+]
+
+Role.create(
+  name: "Wide Midfielder",
+  duty: "automatic",
+  primary_attributes: wide_midfielder_automatic_primary_attributes,
+  secondary_attributes: wide_midfielder_automatic_secondary_attributes
+)
+
+winger_support_primary_attributes = [
+  :crossing,
+  :technique,
+  :teamwork,
+  :acceleration,
+  :pace
+]
+
+winger_support_secondary_attributes = [
+  :dribbling,
+  :first_touch,
+  :passing,
+  :tackling,
+  :anticipation,
+  :decisions,
+  :determination,
+  :positioning,
+  :vision,
+  :workrate,
+  :stamina
+]
+
+Role.create(
+  name: "Winger",
+  duty: "support",
+  primary_attributes: winger_support_primary_attributes,
+  secondary_attributes: winger_support_secondary_attributes
+)
+
+winger_attack_primary_attributes = [
+  :crossing,
+  :dribbling,
+  :technique,
+  :acceleration,
+  :pace
+]
+
+winger_attack_secondary_attributes = [
+  :first_touch,
+  :passing,
+  :flair,
+  :off_the_ball,
+  :workrate,
+  :stamina
+]
+
+Role.create(
+  name: "Winger",
+  duty: "attack",
+  primary_attributes: winger_attack_primary_attributes,
+  secondary_attributes: winger_attack_secondary_attributes
+)
+
+defensive_winger_defend_primary_attributes = [
+  :crossing,
+  :technique,
+  :anticipation,
+  :decisions,
+  :determination,
+  :teamwork,
+  :workrate,
+  :pace
+]
+
+defensive_winger_defend_secondary_attributes = [
+  :dribbling,
+  :marking,
+  :passing,
+  :tackling,
+  :aggression,
+  :concentration,
+  :positioning,
+  :acceleration
+]
+
+Role.create(
+  name: "Defensive Winger",
+  duty: "defend",
+  primary_attributes: defensive_winger_defend_primary_attributes,
+  secondary_attributes: defensive_winger_defend_secondary_attributes
+)
+
+defensive_winger_support_primary_attributes = [
+  :anticipation,
+  :decisions,
+  :determination,
+  :teamwork,
+  :workrate,
+  :stamina
+]
+
+defensive_winger_support_secondary_attributes = [
+  :crossing,
+  :dribbling,
+  :marking,
+  :passing,
+  :tackling,
+  :aggression,
+  :concentration,
+  :positioning,
+  :acceleration
+]
+
+Role.create(
+  name: "Defensive Winger",
+  duty: "support",
+  primary_attributes: defensive_winger_support_primary_attributes,
+  secondary_attributes: defensive_winger_support_secondary_attributes
+)
+
+wide_playmaker_support_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :determination,
+  :positioning,
+  :vision,
+  :workrate,
+  :stamina
+]
+
+wide_playmaker_support_secondary_attributes = [
+  :crossing,
+  :dribbling,
+  :marking,
+  :tackling,
+  :aggression,
+  :anticipation,
+  :concentration,
+  :teamwork,
+  :acceleration
+]
+
+Role.create(
+  name: "Wide Playmaker",
+  duty: "support",
+  primary_attributes: wide_playmaker_support_primary_attributes,
+  secondary_attributes: wide_playmaker_support_secondary_attributes
+)
+
+wide_playmaker_attack_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :off_the_ball,
+  :positioning,
+  :vision
+]
+
+wide_playmaker_attack_secondary_attributes = [
+  :dribbling,
+  :anticipation,
+  :concentration,
+  :teamwork
+]
+
+Role.create(
+  name: "Wide Playmaker",
+  duty: "attack",
+  primary_attributes: wide_playmaker_attack_primary_attributes,
+  secondary_attributes: wide_playmaker_attack_secondary_attributes
+)
+
+inverted_winger_support_primary_attributes = [
+  :crossing,
+  :dribbling,
+  :passing,
+  :technique,
+  :decisions,
+  :off_the_ball,
+  :positioning,
+  :acceleration
+]
+
+inverted_winger_support_secondary_attributes = [
+  :first_touch,
+  :long_shots,
+  :anticipation,
+  :composure,
+  :concentration,
+  :teamwork,
+  :vision,
+  :pace
+]
+
+Role.create(
+  name: "Inverted Winger",
+  duty: "support",
+  primary_attributes: inverted_winger_support_primary_attributes,
+  secondary_attributes: inverted_winger_support_secondary_attributes
+)
+
+inverted_winger_attack_primary_attributes = [
+  :crossing,
+  :dribbling,
+  :passing,
+  :technique,
+  :decisions,
+  :off_the_ball,
+  :acceleration
+]
+
+inverted_winger_attack_secondary_attributes = [
+  :finishing,
+  :first_touch,
+  :long_shots,
+  :composure,
+  :flair,
+  :vision,
+  :pace
+]
+
+Role.create(
+  name: "Inverted Winger",
+  duty: "attack",
+  primary_attributes: inverted_winger_attack_primary_attributes,
+  secondary_attributes: inverted_winger_attack_secondary_attributes
+)
