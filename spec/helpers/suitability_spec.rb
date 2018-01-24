@@ -25,5 +25,11 @@ describe Suitability do
 
       expect(suitability_score.primary_score).to eq 10
     end
+
+    it "returns the expected secondary score for player and role" do
+      suitability_score = Suitability.new(player, role).determine
+
+      expect(suitability_score.secondary_score).to eq 5
+    end
   end
 end
