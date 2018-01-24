@@ -4,12 +4,10 @@ describe Suitability do
   let(:role) { FactoryBot.create(:role) }
 
   context "#determine" do
-    it "calculates a relevant attributes score for the player" do
-      expected_suitability_score = 15
-
+    it "returns a suitability score object" do
       suitability = Suitability.new(player, role).calculate
 
-      expect(suitability.score).to eq expected_suitability_score
+      expect(suitability.class.name).to eq 'SuitabilityScore'
     end
   end
 end
