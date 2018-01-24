@@ -892,7 +892,7 @@ advanced_playmaker_attack_primary_attributes = [
   :acceleration
 ]
 
-advanced_playmaker_support_secondary_attributes = [
+advanced_playmaker_attack_secondary_attributes = [
   :anticipation,
   :flair,
   :off_the_ball,
