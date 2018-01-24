@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'require_all'
+require 'factory_bot'
 
 require_all 'app/helpers'
 
