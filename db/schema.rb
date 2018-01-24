@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124231617) do
+ActiveRecord::Schema.define(version: 20180124232949) do
 
   create_table "abilities", force: :cascade do |t|
     t.integer "player_id"
@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20180124231617) do
   create_table "players", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.integer "abilities_id"
     t.integer "club_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

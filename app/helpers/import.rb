@@ -72,7 +72,6 @@ class Import
       player_abilities.workrate = row.last.value.to_i
 
       player_abilities.update_attributes(player_id: player.id)
-      player.update_attributes(abilities_id: player_abilities.id)
 
       player_abilities.save
     end
