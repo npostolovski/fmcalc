@@ -1957,3 +1957,475 @@ Role.create(
   primary_attributes: inverted_winger_attack_primary_attributes,
   secondary_attributes: inverted_winger_attack_secondary_attributes
 )
+
+inside_forward_support_primary_attributes = [
+  :dribbling,
+  :passing,
+  :technique,
+  :decisions,
+  :off_the_ball,
+  :acceleration
+]
+
+inside_forward_support_secondary_attributes = [
+  :crossing,
+  :finishing,
+  :first_touch,
+  :long_shots,
+  :composure,
+  :flair,
+  :vision,
+  :pace
+]
+
+Role.create(
+  name: "Inside Forward",
+  duty: "support",
+  primary_attributes: inside_forward_support_primary_attributes,
+  secondary_attributes: inside_forward_support_secondary_attributes
+)
+
+inside_forward_attack_primary_attributes = [
+  :dribbling,
+  :finishing,
+  :passing,
+  :technique,
+  :decisions,
+  :off_the_ball,
+  :acceleration
+]
+
+inside_forward_attack_secondary_attributes = [
+  :crossing,
+  :first_touch,
+  :long_shots,
+  :composure,
+  :flair,
+  :vision,
+  :pace
+]
+
+Role.create(
+  name: "Inside Forward",
+  duty: "attack",
+  primary_attributes: inside_forward_attack_primary_attributes,
+  secondary_attributes: inside_forward_attack_secondary_attributes
+)
+
+wide_target_man_support_primary_attributes = [
+  :heading,
+  :passing,
+  :technique,
+  :composure,
+  :vision,
+  :jumping_reach,
+  :strength
+]
+
+wide_target_man_support_secondary_attributes = [
+  :dribbling,
+  :finishing,
+  :first_touch,
+  :anticipation,
+  :decisions,
+  :flair,
+  :off_the_ball,
+  :teamwork,
+  :agility,
+  :balance
+]
+
+Role.create(
+  name: "Wide Target Man",
+  duty: "support",
+  primary_attributes: wide_target_man_support_primary_attributes,
+  secondary_attributes: wide_target_man_support_secondary_attributes
+)
+
+wide_target_man_attack_primary_attributes = [
+  :heading,
+  :jumping_reach,
+  :strength
+]
+
+wide_target_man_attack_secondary_attributes = [
+  :first_touch,
+  :passing,
+  :anticipation,
+  :decisions,
+  :off_the_ball,
+  :teamwork,
+  :agility,
+  :balance
+]
+
+Role.create(
+  name: "Wide Target Man",
+  duty: "attack",
+  primary_attributes: wide_target_man_attack_primary_attributes,
+  secondary_attributes: wide_target_man_attack_secondary_attributes
+)
+
+raumdeuter_primary_attributes = [
+  :anticipation,
+  :composure,
+  :concentration,
+  :decisions,
+  :determination,
+  :off_the_ball,
+  :workrate,
+  :balance,
+  :stamina
+]
+
+raumdeuter_secondary_attributes = [
+  :finishing,
+  :first_touch,
+  :acceleration
+]
+
+Role.create(
+  name: "Raumdeuter",
+  duty: "attack",
+  primary_attributes: raumdeuter_primary_attributes,
+  secondary_attributes: raumdeuter_secondary_attributes
+)
+
+deep_lying_forward_support_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :off_the_ball,
+  :teamwork
+]
+
+deep_lying_forward_support_secondary_attributes = [
+  :dribbling,
+  :anticipation,
+  :vision,
+  :balance,
+  :strength
+]
+
+Role.create(
+  name: "Deep Lying Forward",
+  duty: "support",
+  primary_attributes: deep_lying_forward_support_primary_attributes,
+  secondary_attributes: deep_lying_forward_support_secondary_attributes
+)
+
+deep_lying_forward_attack_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :composure,
+  :decisions,
+  :off_the_ball,
+  :teamwork
+]
+
+deep_lying_forward_attack_secondary_attributes = [
+  :dribbling,
+  :finishing,
+  :anticipation,
+  :vision,
+  :balance,
+  :strength
+]
+
+Role.create(
+  name: "Deep Lying Forward",
+  duty: "attack",
+  primary_attributes: deep_lying_forward_attack_primary_attributes,
+  secondary_attributes: deep_lying_forward_attack_secondary_attributes
+)
+
+advanced_forward_primary_attributes = [
+  :finishing,
+  :technique,
+  :anticipation,
+  :composure,
+  :off_the_ball,
+  :teamwork
+]
+
+advanced_forward_secondary_attributes = [
+  :dribbling,
+  :first_touch,
+  :heading,
+  :passing,
+  :decisions,
+  :determination,
+  :vision,
+  :workrate,
+  :acceleration,
+  :balance,
+  :strength
+]
+
+Role.create(
+  name: "Advanced Forward",
+  duty: "attack",
+  primary_attributes: advanced_forward_primary_attributes,
+  secondary_attributes: advanced_forward_secondary_attributes
+)
+
+target_man_support_primary_attributes = [
+  :finishing,
+  :heading,
+  :composure,
+  :off_the_ball,
+  :balance,
+  :jumping_reach,
+  :strength
+]
+
+target_man_support_secondary_attributes = [
+  :dribbling,
+  :first_touch,
+  :passing,
+  :aggression,
+  :anticipation,
+  :bravery,
+  :decisions,
+  :determination,
+  :teamwork,
+  :workrate,
+  :acceleration
+]
+
+Role.create(
+  name: "Target Man",
+  duty: "support",
+  primary_attributes: target_man_support_primary_attributes,
+  secondary_attributes: target_man_support_secondary_attributes
+)
+
+target_man_attack_primary_attributes = [
+  :finishing,
+  :heading,
+  :balance,
+  :jumping_reach,
+  :strength
+]
+
+target_man_attack_secondary_attributes = [
+  :first_touch,
+  :passing,
+  :aggression,
+  :anticipation,
+  :bravery,
+  :decisions,
+  :determination,
+  :teamwork,
+  :workrate
+]
+
+Role.create(
+  name: "Target Man",
+  duty: "attack",
+  primary_attributes: target_man_attack_primary_attributes,
+  secondary_attributes: target_man_attack_secondary_attributes
+)
+
+poacher_primary_attributes = [
+  :finishing,
+  :first_touch,
+  :heading,
+  :anticipation,
+  :composure,
+  :off_the_ball,
+  :balance,
+  :jumping_reach,
+  :strength
+]
+
+poacher_secondary_attributes = [
+  :passing,
+  :aggression,
+  :bravery,
+  :concentration,
+  :decisions,
+  :determination,
+  :teamwork,
+  :workrate,
+  :acceleration,
+  :agility
+]
+
+Role.create(
+  name: "Poacher",
+  duty: "attack",
+  primary_attributes: poacher_primary_attributes,
+  secondary_attributes: poacher_secondary_attributes
+)
+
+complete_forward_support_primary_attributes = [
+  :dribbling,
+  :first_touch,
+  :heading,
+  :long_shots,
+  :passing,
+  :technique,
+  :anticipation,
+  :composure,
+  :decisions,
+  :off_the_ball,
+  :vision,
+  :acceleration,
+  :agility,
+  :strength
+]
+
+complete_forward_support_secondary_attributes = [
+  :finishing,
+  :concentration,
+  :determination,
+  :teamwork,
+  :workrate,
+  :balance,
+  :jumping_reach,
+  :pace
+]
+
+Role.create(
+  name: "Complete Forward",
+  duty: "support",
+  primary_attributes: complete_forward_support_primary_attributes,
+  secondary_attributes: complete_forward_support_secondary_attributes
+)
+
+complete_forward_attack_primary_attributes = [
+  :dribbling,
+  :finishing,
+  :first_touch,
+  :heading,
+  :passing,
+  :technique,
+  :anticipation,
+  :composure,
+  :decisions,
+  :off_the_ball,
+  :vision,
+  :acceleration,
+  :agility,
+  :strength
+]
+
+complete_forward_attack_secondary_attributes = [
+  :long_shots,
+  :concentration,
+  :determination,
+  :teamwork,
+  :workrate,
+  :balance,
+  :jumping_reach,
+  :pace
+]
+
+Role.create(
+  name: "Complete Forward",
+  duty: "attack",
+  primary_attributes: complete_forward_attack_primary_attributes,
+  secondary_attributes: complete_forward_attack_secondary_attributes
+)
+
+defensive_forward_defend_primary_attributes = [
+  :dribbling,
+  :finishing,
+  :first_touch,
+  :heading,
+  :passing,
+  :technique,
+  :aggression,
+  :bravery,
+  :composure,
+  :decisions,
+  :determination,
+  :off_the_ball,
+  :teamwork,
+  :vision,
+  :workrate,
+  :acceleration,
+  :agility,
+  :stamina
+]
+
+defensive_forward_defend_secondary_attributes = [
+  :long_shots,
+  :anticipation,
+  :concentration,
+  :positioning,
+  :balance,
+  :jumping_reach,
+  :pace,
+  :strength
+]
+
+Role.create(
+  name: "Defensive Forward",
+  duty: "defend",
+  primary_attributes: defensive_forward_defend_primary_attributes,
+  secondary_attributes: defensive_forward_defend_secondary_attributes
+)
+
+defensive_forward_support_primary_attributes = [
+  :aggression,
+  :bravery,
+  :determination,
+  :teamwork,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+defensive_forward_support_secondary_attributes = [
+  :anticipation,
+  :concentration,
+  :positioning,
+  :strength
+]
+
+Role.create(
+  name: "Defensive Forward",
+  duty: "support",
+  primary_attributes: defensive_forward_support_primary_attributes,
+  secondary_attributes: defensive_forward_support_secondary_attributes
+)
+
+false_nine_primary_attributes = [
+  :first_touch,
+  :passing,
+  :technique,
+  :aggression,
+  :bravery,
+  :composure,
+  :determination,
+  :off_the_ball,
+  :teamwork,
+  :vision,
+  :workrate,
+  :acceleration,
+  :stamina
+]
+
+false_nine_secondary_attributes = [
+  :dribbling,
+  :finishing,
+  :anticipation,
+  :concentration,
+  :decisions,
+  :positioning,
+  :agility,
+  :balance,
+  :strength
+]
+
+Role.create(
+  name: "False Nine",
+  duty: "support",
+  primary_attributes: false_nine_primary_attributes,
+  secondary_attributes: false_nine_secondary_attributes
+)
