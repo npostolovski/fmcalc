@@ -6,6 +6,8 @@
     <% top3.each do |suitability_score| %>
       <li><strong><%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %></strong>
         <ul>
+          <li>Percentage Primary: <%= suitability_score.percentage_primary %>%</li>
+          <li>Percentage Secondary: <%= suitability_score.percentage_secondary %>%</li>
           <li>Total Score: <%= suitability_score.total_score %></li>
           <li>Primary Score: <%= suitability_score.primary_score %></li>
           <li>Secondary Score: <%= suitability_score.secondary_score %></li>
