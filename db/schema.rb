@@ -68,6 +68,13 @@ ActiveRecord::Schema.define(version: 20180125071353) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "insights", force: :cascade do |t|
+    t.integer "club_id"
+    t.text "poor_depth_roles"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -75,6 +82,14 @@ ActiveRecord::Schema.define(version: 20180125071353) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "versatility_score", default: 0.0
+  end
+
+  create_table "role_depths", force: :cascade do |t|
+    t.integer "club_id"
+    t.integer "role_id"
+    t.float "depth_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "roles", force: :cascade do |t|

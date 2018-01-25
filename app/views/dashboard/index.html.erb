@@ -18,6 +18,15 @@
       <% end %>
       </ul>
     </div>
+
+    <div class="wide-insight-panel">
+      <h4>Highest Potential Roles</h4>
+      <ul>
+        <% @highest_potential_roles.each do |suitability_score| %>
+          <li><%= suitability_score.suitability_rating %> <%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %>, <%= suitability_score.role.name %> (<%= suitability_score.role.duty.capitalize %>)</li>
+        <% end %>
+      </ul>
+    </div>
   </div>
   <div class="roles-and-duties">
     <h2>Roles & Duties</h2>
