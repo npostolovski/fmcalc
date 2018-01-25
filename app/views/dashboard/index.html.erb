@@ -6,7 +6,7 @@
       <h3><%= role.name %> (<%= role.duty %>)</h3>
       <ul>
         <% top3.each do |suitability_score| %>
-          <li><strong><%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %>
+          <li class="player"><strong><%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %>
             <% if suitability_score.suitability_rating < 40.00 %>
               <span class="poor-rating">(<%= suitability_score.suitability_rating %>/100)<span>
             <% elsif suitability_score.suitability_rating < 50 %>
@@ -21,7 +21,7 @@
               <span class="world-class-rating">(<%= suitability_score.suitability_rating %>/100)<span>
             <% end %>
             </strong>
-            <ul>
+            <ul class="player-statistics">
               <li>Percentage Primary: <%= suitability_score.percentage_primary %>%</li>
               <li>Percentage Secondary: <%= suitability_score.percentage_secondary %>%</li>
               <li>Total Score: <%= suitability_score.total_score %></li>

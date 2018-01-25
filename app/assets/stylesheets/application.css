@@ -23,6 +23,19 @@
    padding-left: 20px;
  }
 
+ ul {
+   padding-left: 0;
+ }
+
+ li {
+   list-style-type: none;
+   margin-left: 0;
+ }
+
+ li.player {
+   margin-bottom: 20px;
+ }
+
  .container {
    width: 90%;
    margin: 0 auto;
@@ -37,6 +50,10 @@
    float: left;
    border-radius: 8px;
    box-shadow: inset 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0,0,0,.1);
+ }
+
+ ul.player-statistics li {
+   color: #888;
  }
 
  .poor-rating {
