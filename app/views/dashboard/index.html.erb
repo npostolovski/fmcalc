@@ -1,39 +1,61 @@
 <div class="container">
   <h1><%= @club.name %></h1>
-  <% @roles.each do |role| %>
-    <div class="role-panel">
-      <% top3 = role.suitability_scores.order(suitability_rating: :desc).limit(3) %>
-      <h3><%= role.name %> (<%= role.duty %>)</h3>
+  <div class="insights">
+    <h2>Insights</h2>
+    <div class="insight-panel">
+      <h4>Least Versatile Players:</h5>
       <ul>
-        <% top3.each do |suitability_score| %>
-          <li class="player"><strong><%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %>
-            <% if suitability_score.suitability_rating < 40.00 %>
-              <span class="poor-rating">(<%= suitability_score.suitability_rating %>/100)<span>
-            <% elsif suitability_score.suitability_rating < 50 %>
-              <span class="ok-rating">(<%= suitability_score.suitability_rating %>/100)<span>
-            <% elsif suitability_score.suitability_rating < 60 %>
-              <span class="good-rating">(<%= suitability_score.suitability_rating %>/100)<span>
-            <% elsif suitability_score.suitability_rating < 70 %>
-              <span class="very-good-rating">(<%= suitability_score.suitability_rating %>/100)<span>
-            <% elsif suitability_score.suitability_rating < 80 %>
-              <span class="excellent-rating">(<%= suitability_score.suitability_rating %>/100)<span>
-            <% elsif suitability_score.suitability_rating < 100 %>
-              <span class="world-class-rating">(<%= suitability_score.suitability_rating %>/100)<span>
-            <% end %>
-            </strong>
-            <ul class="player-statistics">
-              <li>Percentage Primary: <%= suitability_score.percentage_primary %>%</li>
-              <li>Percentage Secondary: <%= suitability_score.percentage_secondary %>%</li>
-              <li>Total Score: <%= suitability_score.total_score %></li>
-              <li>Primary Score: <%= suitability_score.primary_score %></li>
-              <li>Secondary Score: <%= suitability_score.secondary_score %></li>
-              <li>Average Primary Score: <%= suitability_score.average_primary %></li>
-              <li>Average Secondary Score: <%= suitability_score.average_secondary %></li>
-              <li>Total Average: <%= suitability_score.total_average %></li>
-            </ul>
-          </li>
-        <% end %>
+      <% @least_versatile_players.each do |player| %>
+        <li><%= player.first_name %> <%= player.last_name %> (<%= player.versatility_score %> Versatility Score) </li>
+      <% end %>
       </ul>
     </div>
-  <% end %>
+    <div class="insight-panel">
+      <h4>Most Versatile Players:</h5>
+      <ul>
+      <% @most_versatile_players.each do |player| %>
+        <li><%= player.first_name %> <%= player.last_name %> (<%= player.versatility_score %> Versatility Score) </li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="roles-and-duties">
+    <h2>Roles & Duties</h2>
+    <% @roles.each do |role| %>
+      <div class="role-panel">
+        <% top3 = role.suitability_scores.order(suitability_rating: :desc).limit(3) %>
+        <h3><%= role.name %> (<%= role.duty %>)</h3>
+        <ul>
+          <% top3.each do |suitability_score| %>
+            <li class="player"><strong><%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %>
+              <% if suitability_score.suitability_rating < 40.00 %>
+                <span class="poor-rating">(<%= suitability_score.suitability_rating %>/100)<span>
+              <% elsif suitability_score.suitability_rating < 50 %>
+                <span class="ok-rating">(<%= suitability_score.suitability_rating %>/100)<span>
+              <% elsif suitability_score.suitability_rating < 60 %>
+                <span class="good-rating">(<%= suitability_score.suitability_rating %>/100)<span>
+              <% elsif suitability_score.suitability_rating < 70 %>
+                <span class="very-good-rating">(<%= suitability_score.suitability_rating %>/100)<span>
+              <% elsif suitability_score.suitability_rating < 80 %>
+                <span class="excellent-rating">(<%= suitability_score.suitability_rating %>/100)<span>
+              <% elsif suitability_score.suitability_rating < 100 %>
+                <span class="world-class-rating">(<%= suitability_score.suitability_rating %>/100)<span>
+              <% end %>
+              </strong>
+              <ul class="player-statistics">
+                <li>Percentage Primary: <%= suitability_score.percentage_primary %>%</li>
+                <li>Percentage Secondary: <%= suitability_score.percentage_secondary %>%</li>
+                <li>Total Score: <%= suitability_score.total_score %></li>
+                <li>Primary Score: <%= suitability_score.primary_score %></li>
+                <li>Secondary Score: <%= suitability_score.secondary_score %></li>
+                <li>Average Primary Score: <%= suitability_score.average_primary %></li>
+                <li>Average Secondary Score: <%= suitability_score.average_secondary %></li>
+                <li>Total Average: <%= suitability_score.total_average %></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 </div>
