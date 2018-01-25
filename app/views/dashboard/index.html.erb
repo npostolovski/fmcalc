@@ -1,0 +1,19 @@
+<% @roles.each do |role| %>
+  <% top3 = role.suitability_scores.order(total_score: :desc).limit(3) %>
+  <h3><%= role.name %> (<%= role.duty %>)</h3>
+  <ul>
+    <% top3.each do |suitability_score| %>
+      <li><strong><%= suitability_score.player.first_name %> <%= suitability_score.player.last_name %></strong>
+        <ul>
+          <li>Total Score: <%= suitability_score.total_score %></li>
+          <li>Primary Score: <%= suitability_score.primary_score %></li>
+          <li>Secondary Score: <%= suitability_score.secondary_score %></li>
+          <li>Average Primary Score: <%= suitability_score.average_primary %></li>
+          <li>Average Secondary Score: <%= suitability_score.average_secondary %></li>
+          <li>Total Average: <%= suitability_score.total_average %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+
+<% end %>
