@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125023823) do
+ActiveRecord::Schema.define(version: 20180125024834) do
 
   create_table "abilities", force: :cascade do |t|
     t.integer "player_id"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20180125023823) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "percentage_primary"
+    t.float "percentage_secondary"
   end
 
 end

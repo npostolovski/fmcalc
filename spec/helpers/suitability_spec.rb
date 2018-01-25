@@ -100,7 +100,7 @@ describe Suitability do
     end
 
     it "returns the expected secondary score for player and role" do
-      expected_secondary_score = 23.5
+      expected_secondary_score = 47
       suitability_score = Suitability.new(player, role).determine
 
       expect(suitability_score.secondary_score).to eq expected_secondary_score
@@ -134,11 +134,18 @@ describe Suitability do
       expect(suitability_score.total_average).to eq expected_total_average
     end
 
-    it "returns a percent_primary score" do
+    it "returns a percentage_primary score" do
       expected_percentage_primary = 41.67
 
       suitability_score = Suitability.new(player, role).determine
       expect(suitability_score.percentage_primary).to eq expected_percentage_primary
+    end
+
+    it "returns a percentage_secondary score" do
+      expected_percentage_secondary = 33.57
+
+      suitability_score = Suitability.new(player, role).determine
+      expect(suitability_score.percentage_secondary).to eq expected_percentage_secondary
     end
   end
 end
