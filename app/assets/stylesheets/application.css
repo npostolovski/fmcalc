@@ -14,6 +14,31 @@
  *= require_self
  */
 
+ body {
+   font-family: 'Rubik', sans-serif;
+   background-color: #FAFBFC;
+ }
+
+ h1 {
+   padding-left: 20px;
+ }
+
+ .container {
+   width: 90%;
+   margin: 0 auto;
+ }
+
+ .role-panel {
+   min-width: 340px;
+   background-color: #fff;
+   margin: 0 20px 40px 20px;
+   padding: 20px;
+   width: 27%;
+   float: left;
+   border-radius: 8px;
+   box-shadow: inset 0 0 0 1px #dae4ed, 0 5px 15px -5px rgba(0,0,0,.1);
+ }
+
  .poor-rating {
    color: red;
  }
