@@ -147,5 +147,12 @@ describe Suitability do
       suitability_score = Suitability.new(player, role).determine
       expect(suitability_score.percentage_secondary).to eq expected_percentage_secondary
     end
+
+    it "returns an overall suitability rating" do
+      expected_suitability_rating = 44.07
+
+      suitability_score = Suitability.new(player, role).determine
+      expect(suitability_score.suitability_rating).to eq expected_suitability_rating
+    end
   end
 end

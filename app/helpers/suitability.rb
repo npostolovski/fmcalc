@@ -1,6 +1,7 @@
 class Suitability
   SECONDARY_ATTRIBUTES_MODIFIER = 0.5
   MAXIMUM_ATTRIBUTE_SCORE = 20
+  SUITABILITY_RATING_MODIFIER = 0.66666667
 
   attr_accessor :player, :role, :primary_total, :secondary_total,
   :average_primary, :average_secondary, :percentage_primary, :percentage_secondary
@@ -27,7 +28,8 @@ class Suitability
       average_secondary: average_secondary,
       total_average: total_average_score,
       percentage_primary: percentage_primary,
-      percentage_secondary: percentage_secondary
+      percentage_secondary: percentage_secondary,
+      suitability_rating: ((percentage_primary + (percentage_secondary / 2)) * SUITABILITY_RATING_MODIFIER).round(2)
     )
   end
 
