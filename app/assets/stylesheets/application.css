@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ .poor-rating {
+   color: red;
+ }
+
+ .ok-rating {
+   color: #FFA500;
+ }
+
+ .good-rating {
+   color: #008000;
+ }
+
+ .very-good-rating {
+   color: #32CD32;
+ }
+
+ .excellent-rating {
+   color: #C0C0C0;
+ }
+
+ .world-class-rating {
+   color: #c2b73e;
+ }
