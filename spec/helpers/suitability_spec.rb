@@ -21,15 +21,24 @@ describe Suitability do
     end
 
     it "returns the expected primary score for player and role" do
+      expected_primary_score = 10
       suitability_score = Suitability.new(player, role).determine
 
-      expect(suitability_score.primary_score).to eq 10
+      expect(suitability_score.primary_score).to eq expected_primary_score
     end
 
     it "returns the expected secondary score for player and role" do
+      expected_secondary_score = 5
       suitability_score = Suitability.new(player, role).determine
 
-      expect(suitability_score.secondary_score).to eq 5
+      expect(suitability_score.secondary_score).to eq expected_secondary_score
+    end
+
+    it "returns the expected total score" do
+      expected_total_score = 15
+      suitability_score = Suitability.new(player, role).determine
+
+      expect(suitability_score.total_score).to eq expected_total_score
     end
   end
 end
