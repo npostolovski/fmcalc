@@ -8,8 +8,8 @@ class Suitability
     @role = role
     @primary_total ||= relevant_attribute_score(:primary_attributes)
     @secondary_total ||= relevant_attribute_score(:secondary_attributes)
-    @average_primary ||= primary_total / role.primary_attributes.count
-    @average_secondary ||= (secondary_total / SECONDARY_ATTRIBUTES_MODIFIER) / role.secondary_attributes.count
+    @average_primary ||= average_primary_score
+    @average_secondary ||= average_secondary_score
   end
 
   def determine
@@ -21,7 +21,7 @@ class Suitability
       total_score: primary_total + secondary_total,
       average_primary: average_primary,
       average_secondary: average_secondary,
-      total_average: (average_primary + average_secondary) / 2
+      total_average: total_average_score
     )
   end
 
@@ -39,5 +39,18 @@ class Suitability
     role.send(primary_or_secondary_attributes).inject(0) do |sum, attr|
       player.abilities.send(attr)
     end
+  end
+
+  def average_primary_score
+    primary_total / role.primary_attributes.count
+  end
+
+  def average_secondary_score
+    unmodified_secondary_total = secondary_total / SECONDARY_ATTRIBUTES_MODIFIER
+    unmodified_secondary_total / role.secondary_attributes.count
+  end
+
+  def total_average_score
+    (average_primary + average_secondary) / 2
   end
 end
