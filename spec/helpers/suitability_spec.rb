@@ -133,5 +133,12 @@ describe Suitability do
 
       expect(suitability_score.total_average).to eq expected_total_average
     end
+
+    it "returns a percent_primary score" do
+      expected_percentage_primary = 41.67
+
+      suitability_score = Suitability.new(player, role).determine
+      expect(suitability_score.percentage_primary).to eq expected_percentage_primary
+    end
   end
 end
