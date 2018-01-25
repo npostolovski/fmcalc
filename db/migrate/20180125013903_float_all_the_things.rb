@@ -1,0 +1,55 @@
+class FloatAllTheThings < ActiveRecord::Migration[5.1]
+  def change
+    change_column :abilities, :one_on_ones, :float
+    change_column :abilities, :acceleration, :float
+    change_column :abilities, :aerial_ability, :float
+    change_column :abilities, :agility, :float
+    change_column :abilities, :anticipation, :float
+    change_column :abilities, :bravery, :float
+    change_column :abilities, :balance, :float
+    change_column :abilities, :command_of_area, :float
+    change_column :abilities, :composure, :float
+    change_column :abilities, :communication, :float
+    change_column :abilities, :corners, :float
+    change_column :abilities, :concentration, :float
+    change_column :abilities, :crossing, :float
+    change_column :abilities, :decisions, :float
+    change_column :abilities, :determination, :float
+    change_column :abilities, :dribbling, :float
+    change_column :abilities, :eccentricity, :float
+    change_column :abilities, :finishing, :float
+    change_column :abilities, :first_touch, :float
+    change_column :abilities, :flair, :float
+    change_column :abilities, :free_kicks, :float
+    change_column :abilities, :handling, :float
+    change_column :abilities, :heading, :float
+    change_column :abilities, :jumping_reach, :float
+    change_column :abilities, :kicking, :float
+    change_column :abilities, :leadership, :float
+    change_column :abilities, :long_shots, :float
+    change_column :abilities, :long_throws, :float
+    change_column :abilities, :marking, :float
+    change_column :abilities, :natural_fitness, :float
+    change_column :abilities, :off_the_ball, :float
+    change_column :abilities, :passing, :float
+    change_column :abilities, :pace, :float
+    change_column :abilities, :positioning, :float
+    change_column :abilities, :punching, :float
+    change_column :abilities, :reflexes, :float
+    change_column :abilities, :rushing_out, :float
+    change_column :abilities, :stamina, :float
+    change_column :abilities, :strength, :float
+    change_column :abilities, :tackling, :float
+    change_column :abilities, :teamwork, :float
+    change_column :abilities, :technique, :float
+    change_column :abilities, :throwing, :float
+    change_column :abilities, :vision, :float
+    change_column :abilities, :workrate, :float
+    change_column :suitability_scores, :primary_score, :float
+    change_column :suitability_scores, :secondary_score, :float
+    change_column :suitability_scores, :total_score, :float
+    change_column :suitability_scores, :average_primary, :float
+    change_column :suitability_scores, :average_secondary, :float
+    change_column :suitability_scores, :total_average, :float
+  end
+end

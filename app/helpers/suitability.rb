@@ -13,7 +13,7 @@ class Suitability
   end
 
   def determine
-    suitability_score = SuitabilityScore.new(
+    suitability_score = SuitabilityScore.create(
       player: player,
       role: role,
       primary_score: primary_total,
@@ -36,21 +36,21 @@ class Suitability
   end
 
   def calculate_scores(primary_or_secondary_attributes)
-    role.send(primary_or_secondary_attributes).inject(0) do |sum, attr|
+    role.send(primary_or_secondary_attributes).map do |attr|
       player.abilities.send(attr)
-    end
+    end.sum
   end
 
   def average_primary_score
-    primary_total / role.primary_attributes.count
+    (primary_total / role.primary_attributes.count).round(2)
   end
 
   def average_secondary_score
     unmodified_secondary_total = secondary_total / SECONDARY_ATTRIBUTES_MODIFIER
-    unmodified_secondary_total / role.secondary_attributes.count
+    (unmodified_secondary_total / role.secondary_attributes.count).round(2)
   end
 
   def total_average_score
-    (average_primary + average_secondary) / 2
+    ((average_primary + average_secondary) / 2).round(2)
   end
 end
