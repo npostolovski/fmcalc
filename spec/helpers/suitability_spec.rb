@@ -40,5 +40,26 @@ describe Suitability do
 
       expect(suitability_score.total_score).to eq expected_total_score
     end
+
+    it "returns the expected average primary score" do
+      expected_average_primary_score = 10
+      suitability_score = Suitability.new(player, role).determine
+
+      expect(suitability_score.average_primary).to eq expected_average_primary_score
+    end
+
+    it "returns the expected average secondary score" do
+      expected_average_secondary_score = 10
+      suitability_score = Suitability.new(player, role).determine
+
+      expect(suitability_score.average_secondary).to eq expected_average_secondary_score
+    end
+
+    it "returns the expected total average" do
+      expected_total_average = 10
+      suitability_score = Suitability.new(player, role).determine
+
+      expect(suitability_score.total_average).to eq expected_total_average
+    end
   end
 end

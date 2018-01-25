@@ -1,13 +1,15 @@
 class Suitability
   SECONDARY_ATTRIBUTES_MODIFIER = 0.5
 
-  attr_accessor :player, :role, :primary_total, :secondary_total
+  attr_accessor :player, :role, :primary_total, :secondary_total, :average_primary, :average_secondary
 
   def initialize(player, role)
     @player = player
     @role = role
     @primary_total ||= relevant_attribute_score(:primary_attributes)
     @secondary_total ||= relevant_attribute_score(:secondary_attributes)
+    @average_primary ||= primary_total / role.primary_attributes.count
+    @average_secondary ||= (secondary_total / SECONDARY_ATTRIBUTES_MODIFIER) / role.secondary_attributes.count
   end
 
   def determine
@@ -16,7 +18,10 @@ class Suitability
       role: role,
       primary_score: primary_total,
       secondary_score: secondary_total,
-      total_score: primary_total + secondary_total
+      total_score: primary_total + secondary_total,
+      average_primary: average_primary,
+      average_secondary: average_secondary,
+      total_average: (average_primary + average_secondary) / 2
     )
   end
 
